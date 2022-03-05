@@ -48,5 +48,5 @@ Novo Projeto para Estudo usando o framework Flutter.
 
 Feito com ❤️ por Eduardo Kainan 👋🏽 Entre em contato!
 
- [![Linkedin Badge](https://img.shields.io/badge/-Eduardo%20Kainan-7159c1?logo=LinkedIn=https://www.linkedin.com/in/eduardo-kainan-leite-sousa-14b26024/)](https://www.linkedin.com/in/eduardo-kainan-leite-sousa-14b26024/) 
+ [![Linkedin Badge](https://img.shields.io/twitter/url?label=Eduardo%20Kainan&logo=LinkedIn&style=social&url=https%3A%2F%2Fimg.shields.io%2Fbadge%2F-Eduardo%2520Kainan-7159c1%3Flogo%3DLinkedIn=https://www.linkedin.com/in/eduardo-kainan-leite-sousa-14b26024/)](https://www.linkedin.com/in/eduardo-kainan-leite-sousa-14b26024/) 
 [![Gmail Badge](https://img.shields.io/badge/-tgmarinho@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:eduardokainan.senai@gmail.com)](mailto:eduardokainan.senai@gmail.com)
