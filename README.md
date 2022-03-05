@@ -1,10 +1,6 @@
 # gugubank
 
-A new Flutter project.
-
-## Getting Started
-
-# Projeto-RegTranferencias-GUGU  :dollar:
+Novo Projeto para Estudo usando o framework Flutter.
 
 ## Aplicativo RegTransferencias Gugu 24h
  
@@ -12,7 +8,7 @@ A new Flutter project.
 
 ## Objetivo
 
-:coin: Registrar transações de transferencias realizada entre bancos.
+:coin: Registrar transações de transferencias realizada entre bancos de forma rapida.
 
 ## Tecnologias utilizadas 
 
