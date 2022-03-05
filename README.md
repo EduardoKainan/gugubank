@@ -51,5 +51,5 @@ Feito com ❤️ por Eduardo Kainan 👋🏽 Entre em contato!
  [![Linkedin Badge](https://img.shields.io/twitter/url?label=linkedin&logo=linkedin&style=flat-square&url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Feduardo-kainan-leite-sousa-14b26024%2F)](https://www.linkedin.com/in/eduardo-kainan-leite-sousa-14b26024/) 
 [![Gmail Badge](https://img.shields.io/twitter/url?label=Email&logo=gmail&style=flat-square&url=https%3A%2F%2Fwww.google.com%2Furl%3Fsa%3Dt%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dweb%26cd%3D%26cad%3Drja%26uact%3D8%26ved%3D2ahUKEwjCg5Czk6_2AhWRIbkGHdWDA-sQFnoECAkQAQ%26url%3Dhttps%253A%252F%252Fwww.google.com%252Fgmail%252F%26usg%3DAOvVaw3mZ_qbD_gQyp_sqkjrwStn%26cshid%3D1646489545753309)](mailto:eduardokainan.senai@gmail.com)
 
- [![Instagram Badge](https://img.shields.io/twitter/url?color=1de1e3&label=Eduardo%20Kainan&logo=instagram&style=social&url=https%3A%2F%2Fwww.instagram.com%2Feduardu.tec%2F)](https://www.instagram.com/eduardu.tec/)
+ ln [![Instagram Badge](https://img.shields.io/twitter/url?color=1de1e3&label=Eduardo%20Kainan&logo=instagram&style=social&url=https%3A%2F%2Fwww.instagram.com%2Feduardu.tec%2F)](https://www.instagram.com/eduardu.tec/)
 

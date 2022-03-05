@@ -99,7 +99,7 @@ class ListadeTransferencias extends StatefulWidget {
   final _transferencias = <Transferencia>[];
 
   @override
-  State<StatefulWidget> createState() {
+  State<ListadeTransferencias> createState() {
     return ListaTransferenciasState();
   }
 }
@@ -134,6 +134,8 @@ class ListaTransferenciasState extends State<ListadeTransferencias> {
       ),
     );
   }
+
+  setState(ListadeTransferencias);
 }
 
 class ItemTransferencia extends StatelessWidget {
