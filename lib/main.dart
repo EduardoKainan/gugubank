@@ -1,4 +1,5 @@
-import 'dart:js';
+import 'package:js/js.dart';
+import 'package:js/src/varargs.dart';
 
 import 'package:flutter/material.dart';
 
@@ -8,14 +9,23 @@ class ByteBankApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: ListadeTransferencias(),
-      ),
+      theme: ThemeData(
+          colorScheme: ColorScheme.fromSwatch().copyWith(
+              primary: Colors.cyan[900], secondary: Colors.indigo[700])),
+      home: ListadeTransferencias(),
     );
   }
 }
 
-class FormularioTransf extends StatelessWidget {
+class FormularioTransf extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return FormularioTransfState();
+  }
+}
+
+class FormularioTransfState extends State<FormularioTransf> {
   final ButtonStyle style =
       ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 16.0));
 
@@ -29,25 +39,27 @@ class FormularioTransf extends StatelessWidget {
       appBar: AppBar(
         title: Text('Criando Transferencia'),
       ),
-      body: Column(
-        children: <Widget>[
-          Editor(
-            controlador: _controladorCampoNunConta,
-            rotulo: 'Numero da Conta',
-            dica: '0000',
-            icone: Icons.countertops,
-          ),
-          Editor(
-              controlador: _controladorCampoVlr,
-              rotulo: 'valor',
-              dica: '0.00',
-              icone: Icons.monetization_on),
-          ElevatedButton(
-            style: style,
-            child: const Text('Confirmar'),
-            onPressed: () => criaTransferencia(context),
-          )
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Editor(
+              controlador: _controladorCampoNunConta,
+              rotulo: 'Numero da Conta',
+              dica: '0000',
+              icone: Icons.countertops,
+            ),
+            Editor(
+                controlador: _controladorCampoVlr,
+                rotulo: 'valor',
+                dica: '0.00',
+                icone: Icons.monetization_on),
+            ElevatedButton(
+              style: style,
+              child: const Text('Confirmar'),
+              onPressed: () => criaTransferencia(context),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -57,7 +69,6 @@ class FormularioTransf extends StatelessWidget {
     final double valorT = double.parse(_controladorCampoVlr.text);
     if (nConta != null && valorT != null) {
       final transferenciaCriada = Transferencia(valorT, nConta);
-      debugPrint('Transferencia criada');
       Navigator.pop(context, transferenciaCriada);
     }
   }
@@ -109,7 +120,7 @@ class ListaTransferenciasState extends State<ListadeTransferencias> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Transferencias'),
+        title: Text('GuGuBank'),
       ),
       body: ListView.builder(
         itemCount: widget._transferencias.length,
@@ -126,16 +137,21 @@ class ListaTransferenciasState extends State<ListadeTransferencias> {
             return FormularioTransf();
           }));
           future.then((transferenciaRecebida) {
-            debugPrint('Chegou no then');
-            debugPrint('$transferenciaRecebida');
-            widget._transferencias.add(transferenciaRecebida);
+            Future.delayed(Duration(seconds: 1), () {
+              debugPrint('$transferenciaRecebida');
+              if (transferenciaRecebida != null) {
+                setState(() {
+                  //o setState e responsavel por chamar o builder, com os valores atualizados
+                  //É nesse exato momento que a tranferencia é adicionada na lista e é nesse momento que a tela precisa ser atualizada
+                  widget._transferencias.add(transferenciaRecebida);
+                });
+              }
+            });
           });
         },
       ),
     );
   }
-
-  setState(ListadeTransferencias);
 }
 
 class ItemTransferencia extends StatelessWidget {
